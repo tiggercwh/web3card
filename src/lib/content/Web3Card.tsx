@@ -11,7 +11,6 @@ import {
 } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
 import { useWalletData } from "../hooks/useWalletData";
-import { formatChainAsNum } from "@/lib/utils";
 
 type Web3CardProps = {
   cardTitle: string;
@@ -59,7 +58,7 @@ const Web3Card = ({
     <>
       <Label>Wallet Address: {wallet.accounts[0]}</Label>
       <Label>Wallet Balance: {wallet.balance}</Label>
-      <Label>ChainId: {formatChainAsNum(wallet.chainId)}</Label>
+      <Label>ChainId: {wallet.chainId}</Label>
       {ENS && <Label>ENS: {ENS}</Label>}
       {signedMessage && (
         <>

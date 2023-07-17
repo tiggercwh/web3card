@@ -10,7 +10,7 @@ type WalletData = {
 };
 
 export const useWalletData = () => {
-  const initialState = { accounts: [], balance: "" };
+  const initialState = { accounts: [] as string[], balance: "" } as WalletData;
   const [latestWallet, setLatestWallet] = useLocalStorage(
     "web3-wallet",
     initialState
@@ -19,7 +19,7 @@ export const useWalletData = () => {
   const [signer, setSigner] = useState<JsonRpcSigner | null>(null);
   const [signedMessage, setSignedMessage] = useState("");
 
-  const [wallet, setWallet] = useState(latestWallet);
+  const [wallet, setWallet] = useState<WalletData>(latestWallet);
   const [publicKey, setPublicKey] = useState(null);
   const [avatar, setAvatar] = useState<string | null>("");
 
