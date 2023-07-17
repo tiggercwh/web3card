@@ -1,7 +1,6 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@metamask/detect-provider': ^2.0.0
   '@radix-ui/react-avatar': ^1.0.3
   '@radix-ui/react-label': ^2.0.2
   '@radix-ui/react-slot': ^1.0.2
@@ -30,7 +29,6 @@ specifiers:
   vite: ^4.4.0
 
 dependencies:
-  '@metamask/detect-provider': 2.0.0
   '@radix-ui/react-avatar': 1.0.3_uas4yajzsllemiyrexr66mus4q
   '@radix-ui/react-label': 2.0.2_uas4yajzsllemiyrexr66mus4q
   '@radix-ui/react-slot': 1.0.2_tznpbkknyqq5lcv5sgrl332jvu
@@ -590,11 +588,6 @@ packages:
     dependencies:
       '@jridgewell/resolve-uri': 3.1.0
       '@jridgewell/sourcemap-codec': 1.4.14
-
-  /@metamask/detect-provider/2.0.0:
-    resolution: {integrity: sha512-sFpN+TX13E9fdBDh9lvQeZdJn4qYoRb/6QF2oZZK/Pn559IhCFacPMU1rMuqyXoFQF3JSJfii2l98B87QDPeCQ==}
-    engines: {node: '>=14.0.0'}
-    dev: false
 
   /@noble/hashes/1.1.2:
     resolution: {integrity: sha512-KYRCASVTv6aeUi1tsF8/vpyR7zpfs3FUzy2Jqm+MU+LmUKhQ0y2FpfwqkCcxSg2ua4GALJd8k2R76WxwZGbQpA==}
