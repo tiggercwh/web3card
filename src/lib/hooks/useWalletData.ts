@@ -3,8 +3,14 @@ import { useLocalStorage } from "usehooks-ts";
 import { ethers, EnsResolver } from "ethers";
 import type { JsonRpcSigner } from "ethers";
 
+type WalletData = {
+  accounts: string[];
+  balance: string;
+  chainId: number;
+};
+
 export const useWalletData = () => {
-  const initialState = { accounts: [], balance: "", chainId: "" };
+  const initialState = { accounts: [], balance: "" };
   const [latestWallet, setLatestWallet] = useLocalStorage(
     "web3-wallet",
     initialState
@@ -15,9 +21,9 @@ export const useWalletData = () => {
 
   const [wallet, setWallet] = useState(latestWallet);
   const [publicKey, setPublicKey] = useState(null);
-  const [avatar, setAvatar] = useState("");
+  const [avatar, setAvatar] = useState<string | null>("");
 
-  const [ENS, setENS] = useState(null);
+  const [ENS, setENS] = useState<string | null>(null);
 
   const [isConnecting, setIsConnecting] = useState(false);
   const [error, setError] = useState(false);

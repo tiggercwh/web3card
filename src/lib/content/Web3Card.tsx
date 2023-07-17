@@ -97,6 +97,14 @@ const Web3Card = ({
     </Card>;
   }
 
+  if (isConnecting) {
+    return (
+      <Card className="min-w-[350px]">
+        <Label>Connecting...</Label>
+      </Card>
+    );
+  }
+
   return (
     <Card className="min-w-[350px]" style={customCardStyle}>
       <div className="flex flex-row justify-between">

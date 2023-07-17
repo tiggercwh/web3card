@@ -1,17 +1,4 @@
-import { useEffect, useState } from "react";
-import { ethers, EnsResolver } from "ethers";
-
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
 import "./App.css";
-import { formatBalance, formatChainAsNum } from "@/lib/utils";
-import type { JsonRpcSigner } from "ethers";
 import Web3Card from "@/lib/content/Web3Card";
 
 /*
